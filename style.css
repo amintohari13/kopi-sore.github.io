@@ -1,0 +1,236 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #4A2E1F; /* Darker brown for headings */
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    color: #4A2E1F !important;
+    font-size: 1.8rem;
+}
+
+.navbar-nav .nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #964B00 !important; /* Coffee brown */
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('img/hero.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    color: #FFF;
+}
+
+.hero-section p.lead {
+    font-size: 1.75rem;
+    color: #E0E0E0;
+}
+
+.hero-section .btn-warning {
+    background-color: #FFC107; /* Bootstrap yellow */
+    border-color: #FFC107;
+    color: #4A2E1F;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    transform: translateY(-3px);
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: #f8f9fa; /* Light gray for alternating sections */
+}
+
+/* Tentang Kami Section */
+#tentang img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Produk Unggulan Section */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-card .card-body {
+    padding: 25px;
+}
+
+.product-card .card-title {
+    color: #4A2E1F;
+}
+
+.product-card .btn-dark {
+    background-color: #4A2E1F;
+    border-color: #4A2E1F;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn-dark:hover {
+    background-color: #6F4E37;
+    border-color: #6F4E37;
+}
+
+
+/* Galeri Section */
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimoni Section */
+#testimoni .carousel-item {
+    padding: 20px 0;
+}
+
+#testimoni .card {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#testimoni .carousel-control-prev-icon,
+#testimoni .carousel-control-next-icon {
+    background-color: #964B00; /* Coffee brown for controls */
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Kontak Section */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #4A2E1F !important; /* Dark coffee brown */
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #FFC107; /* Yellow on hover */
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li i {
+    color: #FFC107; /* Icons in yellow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    #testimoni .card {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+}
